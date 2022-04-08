@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Area of a Rectangle Calculator!</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hidden{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h3>Calculate the area of any Rectangle</h3>
+        <div class="row">
+            <div>
+                <label for="a">Length</label>
+                <input type="text" id="a" name="a" style="width: 100px;">
+            </div>
+            <div>
+                <label for="b">Width</label>
+                <input type="text" id="b" name="b" style="width: 100px;">
+            </div>
+        </div>
+        <button id="calc">Calculate</button>
+        <button id="clear">Clear</button>
+        <p class="hidden"></p>
+    </div>
+</div>
+<script>
+    const a = document.getElementById('a');
+    const b = document.getElementById('b');
+    const ans = document.querySelector('p');
+    const calculateButton = document.getElementById('calc');
+    const clearButton = document.getElementById('clear');
+
+    calculateButton.addEventListener('click', function(e){
+        let sideA = +a.value;
+        let sideB = +b.value;
+        let sideAB = (sideA * sideB);
+        ans.classList.remove("hidden");
+        ans.textContent = `The area of the rectangle is ${sideAB}`
+    })
+
+
+    clearButton.addEventListener('click', function(e){
+        a.value = " ";
+        b.value = " ";
+        ans.textContent = "";
+        ans.classList.add("hidden");
+    })
+</script>
+</body>
+</html>
