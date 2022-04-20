@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Avatar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h1>Choose your Avatar!</h1>
+        <img class="picture" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2yPRiX7PuCfIuJmsSVTJH7ky4MSQif-31f4Ij2hIWuVkgNLi4ZLVE9dDbzQvYttJGfBI&usqp=CAU'>
+        <div class="row">
+            <button class="a1">Avatar 1</button>
+            <button class="a2">Avatar 2</button>
+            <button class="a3">Avatar 3</button>
+            <button class="a4">Avatar 4</button>
+            <button class="a5">Avatar 5</button>
+            <button class="a6">Avatar 6</button>
+        </div>
+    </div>
+</div>
+<script>
+    const content = document.querySelector('.content');
+    const a1 = document.getElementById('a1');
+    const a2 = document.getElementById('a1');
+    const a3 = document.getElementById('a1');
+    const a4 = document.getElementById('a1');
+    const a5 = document.getElementById('a1');
+    const a6 = document.getElementById('a1');
+
+    a1.addEventListener('click', function(e){
+        content.image.src='';
+    })
+
+</script>
+</body>
+</html>
