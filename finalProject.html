@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.9 Project</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hidden{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h3>5-function Calculator</h3>
+        <div class="row">
+            <div>
+                <label for="a">Value A</label>
+                <input type="text" id="a" name="a" style="width: 100px;">
+            </div>
+            <div>
+                <label for="b">Value B</label>
+                <input type="text" id="b" name="b" style="width: 100px;">
+            </div>
+        </div>
+        <button id="add">Add</button>
+        <button id="subtract">Subtract</button>
+        <button id="multiply">Multiply</button>
+        <button id="divide">Divide</button>
+        <button id="percent">Percentage</button>
+        <button id="clear">Clear</button>
+        <p class="hidden"></p>
+    </div>
+</div>
+<script>
+    const a = document.getElementById('a');
+    const b = document.getElementById('b');
+    const ans = document.querySelector('p');
+    const calculateAddition = document.getElementById('add');
+    const calculateSubtract = document.getElementById('subtract');
+    const calculateMultiply = document.getElementById('multiply');
+    const calculateDivide = document.getElementById('divide');
+    const calculatePercent = document.getElementById('percent');
+    const clearButton = document.getElementById('clear');
+
+    calculateAddition.addEventListener('click', function(e){
+        let valueA = +a.value;
+        let valueB = +b.value;
+        let valueAB = (valueA + valueB);
+
+        ans.classList.remove("hidden");
+        const final = document.createElement('p');
+        final.innerHTML = `${valueA} + ${valueB} = ${valueAB}`;
+        ans.insertAdjacentElement('beforeend', final);
+
+        a.value = " ";
+        b.value = " ";
+    })
+
+    calculateSubtract.addEventListener('click', function(e){
+        let valueA = +a.value;
+        let valueB = +b.value;
+        let valueAB = (valueA - valueB);
+
+        ans.classList.remove("hidden");
+        const final = document.createElement('p');
+        final.innerHTML = `${valueA} - ${valueB} = ${valueAB}`;
+        ans.insertAdjacentElement('beforeend', final);
+
+        a.value = " ";
+        b.value = " ";
+    })
+
+    calculateMultiply.addEventListener('click', function(e){
+        let valueA = +a.value;
+        let valueB = +b.value;
+        let valueAB = (valueA * valueB);
+
+        ans.classList.remove("hidden");
+        const final = document.createElement('p');
+        final.innerHTML = `${valueA} * ${valueB} = ${valueAB}`;
+        ans.insertAdjacentElement('beforeend', final);
+
+        a.value = " ";
+        b.value = " ";
+    })
+
+    calculateDivide.addEventListener('click', function(e){
+        let valueA = +a.value;
+        let valueB = +b.value;
+        let valueAB = (valueA / valueB);
+
+        ans.classList.remove("hidden");
+        const final = document.createElement('p');
+        final.innerHTML = `${valueA} / ${valueB} = ${valueAB}`;
+        ans.insertAdjacentElement('beforeend', final);
+
+        a.value = " ";
+        b.value = " ";
+    })
+
+    calculatePercent.addEventListener('click', function(e){
+        let valueA = +a.value;
+        let valueB = +b.value;
+        let valueAB = (valueA % valueB);
+
+        ans.classList.remove("hidden");
+        const final = document.createElement('p');
+        final.innerHTML = `${valueA} % ${valueB} = ${valueAB}`;
+        ans.insertAdjacentElement('beforeend', final);
+
+        a.value = " ";
+        b.value = " ";
+    })
+
+    clearButton.addEventListener('click', function(e){
+        a.value = " ";
+        b.value = " ";
+        ans.textContent = "";
+    })
+
+</script>
+</body>
+</html>
