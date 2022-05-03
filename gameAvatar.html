@@ -9,7 +9,7 @@
 <div class="container">
     <div class="content">
         <h1>Choose your Avatar!</h1>
-        <img class="picture" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2yPRiX7PuCfIuJmsSVTJH7ky4MSQif-31f4Ij2hIWuVkgNLi4ZLVE9dDbzQvYttJGfBI&usqp=CAU'>
+        <img class="image" src='https://cdn1.vectorstock.com/i/thumb-large/16/05/male-avatar-profile-picture-silhouette-light-vector-5351605.jpg'>
         <div class="row">
             <button class="a1">Avatar 1</button>
             <button class="a2">Avatar 2</button>
@@ -21,16 +21,36 @@
     </div>
 </div>
 <script>
-    const content = document.querySelector('.content');
-    const a1 = document.getElementById('a1');
-    const a2 = document.getElementById('a1');
-    const a3 = document.getElementById('a1');
-    const a4 = document.getElementById('a1');
-    const a5 = document.getElementById('a1');
-    const a6 = document.getElementById('a1');
+    const picture = document.getElementById('image');
+    const avatar1 = document.getElementById('a1');
+    const avatar2 = document.getElementById('a2');
+    const avatar3 = document.getElementById('a3');
+    const avatar4 = document.getElementById('a4');
+    const avatar5 = document.getElementById('a5');
+    const avatar6 = document.getElementById('a6');
 
-    a1.addEventListener('click', function(e){
-        content.image.src='';
+    avatar1.addEventListener('click', function(e){
+        avatar1.image.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2yPRiX7PuCfIuJmsSVTJH7ky4MSQif-31f4Ij2hIWuVkgNLi4ZLVE9dDbzQvYttJGfBI&usqp=CAU';
+    })
+
+    avatar2.addEventListener('click', function(e){
+        avatar2.image.src='https://static.wikia.nocookie.net/characters/images/b/b3/SteveMinecraft.png/revision/latest?cb=20160127082617';
+    })
+
+    avatar3.addEventListener('click', function(e){
+        avatar3.image.src='https://static.wikia.nocookie.net/fantendo/images/3/39/Alex_SSBL.png/revision/latest?cb=20180830191433';
+    })
+
+    avatar4.addEventListener('click', function(e){
+        avatar4.image.src='https://st2.depositphotos.com/5934840/12040/v/950/depositphotos_120409404-stock-illustration-superhero-avatar-superman-comic-design.jpg';
+    })
+
+    avatar5.addEventListener('click', function(e){
+        avatar5.image.src='https://trackercdn.com/legacycdn/fortnite/DA8812858_large.png';
+    })
+
+    avatar6.addEventListener('click', function(e){
+        avatar6.image.src='https://fortniteinsider.com/wp-content/uploads/2020/11/Classic-Hawk.jpg';
     })
 
 </script>
