@@ -1,5 +1,7 @@
 const cardList = document.querySelector('.cardList');
 const points = document.getElementById('points');
+const gameOver = document.getElementById('gameOver');
+const restartButton = document.getElementById('restart');
 let pointAmount = 0;
 let aquaCard = 1;
 let salmonCard = 2;
@@ -11,7 +13,6 @@ let interval = setInterval(function(){
 }, 2000);
 
 cardList.addEventListener('click', function(e){
-    console.log(e.target);
     if (e.target.matches('.cardList')){
         return
     }
@@ -32,6 +33,9 @@ cardList.addEventListener('click', function(e){
     let children = cardList.children;
     if (children.length < 1){
         clearInterval(interval);
+        points.classList.add('hidden');
+        gameOver.classList.remove('hidden');
+        gameOver.innerHTML = `Game Over! You earned ${pointAmount} points.`;
     }
 });
 
@@ -48,3 +52,7 @@ function buildBoard(){
         addCard('starter');
     }
 }
+
+restartButton.addEventListener('click', function(e){
+    location.reload();
+})

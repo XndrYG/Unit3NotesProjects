@@ -31,8 +31,11 @@
         .content {
             width: 1400px;
         }
-        .points{
-
+        .hidden{
+            display:none;
+        }
+        .restart {
+            display:flex;
         }
     </style>
 </head>
@@ -41,6 +44,8 @@
     <div class="content">
         <div class="pointsArea">
             <h1 id="points">Points:</h1>
+            <h1 class="hidden" id="gameOver"></h1>
+            <button class="restart" id="restart">Restart</button>
         </div>
         <div class="cardList">
 
